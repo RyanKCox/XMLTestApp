@@ -34,8 +34,20 @@ class IntentNav : AppCompatActivity() {
         mArticle2 = findViewById(R.id.button_article2)
         mArticle3 = findViewById(R.id.button_article3)
 
-        val receivedMsg = intent.getStringExtra(MESSAGE)
-        msgBox.text = receivedMsg
+//        val receivedMsg = intent.getStringExtra(MESSAGE)
+//        msgBox.text = receivedMsg
+
+        if(savedInstanceState != null){
+            if(savedInstanceState.getBoolean("reply_visible")) {
+                msgBox.visibility = View.VISIBLE
+                msgBox.text = savedInstanceState.getString("reply_text")
+            }
+        }
+        intent.getStringExtra(MESSAGE)?.let {
+            msgBox.text = it
+            msgBox.visibility = View.VISIBLE
+        }
+
 
 
         mSend.setOnClickListener {
@@ -64,5 +76,14 @@ class IntentNav : AppCompatActivity() {
         val intent = Intent(this,IntentNav2::class.java)
             .putExtra(ARTICLE,article)
         getResult.launch(intent)
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        if(msgBox.visibility == View.VISIBLE)
+        {
+            outState.putBoolean("reply_visible",true)
+            outState.putString("reply_text",msgBox.text.toString())
+        }
     }
 }
