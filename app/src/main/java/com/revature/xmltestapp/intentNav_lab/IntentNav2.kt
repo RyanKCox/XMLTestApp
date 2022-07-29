@@ -1,4 +1,4 @@
-package com.revature.xmltestapp
+package com.revature.xmltestapp.intentNav_lab
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ScrollView
 import android.widget.TextView
+import com.revature.xmltestapp.R
 
 class IntentNav2 : AppCompatActivity() {
     private lateinit var mReply:Button

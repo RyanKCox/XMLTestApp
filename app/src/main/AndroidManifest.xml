@@ -14,21 +14,32 @@
         android:theme="@style/Theme.XMLTestApp"
         tools:targetApi="31">
         <activity
-            android:name=".IntentNav2"
-            android:label="@string/intentNav2_name"
-            android:parentActivityName=".IntentNav">
+            android:name=".intentNav_HW.ShoppingItems"
+            android:label="ShoppingItems"
+            android:parentActivityName=".intentNav_HW.ShoppingList">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.revature.xmltestapp.IntentNav" />
+                android:value="com.revature.xmltestapp.intentNav_HW.ShoppingList"/>
         </activity>
         <activity
-            android:name=".IntentNav"
+            android:name=".intentNav_HW.ShoppingList"
             android:exported="false" />
         <activity
-            android:name=".Layout"
+            android:name=".intentNav_lab.IntentNav2"
+            android:label="@string/intentNav2_name"
+            android:parentActivityName=".intentNav_lab.IntentNav">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.revature.xmltestapp.intentNav_lab.IntentNav" />
+        </activity>
+        <activity
+            android:name=".intentNav_lab.IntentNav"
             android:exported="false" />
         <activity
-            android:name=".ScrollingTextView"
+            android:name=".layout_lab.Layout"
+            android:exported="false" />
+        <activity
+            android:name=".scrollingText_lab.ScrollingTextView"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

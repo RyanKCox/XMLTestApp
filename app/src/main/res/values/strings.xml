@@ -41,5 +41,9 @@ This volume starts with the first new Beatle song, “Free as a Bird” (based o
     <string name="article_1">Title</string>
     <string name="article_2">SubTitle</string>
     <string name="article_3">Text</string>
+    <string name="shopping_list">Shopping List</string>
+    <string name="your_shopping_list">Your Shopping List:</string>
+    <string name="add_items">Add Items</string>
+    <string name="select_and_item_to_add">Select and Item to Add:</string>
 
 </resources>

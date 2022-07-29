@@ -1,8 +1,9 @@
-package com.revature.xmltestapp
+package com.revature.xmltestapp.scrollingText_lab
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.revature.xmltestapp.R
 
 class ScrollingTextView : AppCompatActivity() {
 

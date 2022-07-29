@@ -1,4 +1,4 @@
-package com.revature.xmltestapp
+package com.revature.xmltestapp.layout_lab
 
 
 import android.content.Intent
@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.revature.xmltestapp.R
+import com.revature.xmltestapp.scrollingText_lab.ScrollingTextView
 
 class Layout : AppCompatActivity() {
     var nCount = 0
@@ -42,7 +44,7 @@ class Layout : AppCompatActivity() {
     }
 
     private fun showToast() {
-        Toast.makeText(this,R.string.toast_message,Toast.LENGTH_LONG).show()
+        Toast.makeText(this, R.string.toast_message,Toast.LENGTH_LONG).show()
     }
     private fun countUp() {
         nCount++
@@ -53,7 +55,7 @@ class Layout : AppCompatActivity() {
         mShowCount.text = nCount.toString()
     }
     private fun launchTextView(){
-        val intent = Intent(this,ScrollingTextView::class.java)
+        val intent = Intent(this, ScrollingTextView::class.java)
         startActivity(intent)
     }
 }

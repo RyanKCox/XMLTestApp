@@ -1,4 +1,4 @@
-package com.revature.xmltestapp
+package com.revature.xmltestapp.intentNav_lab
 
 import android.app.Activity
 import android.content.Intent
@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
+import com.revature.xmltestapp.R
 
 
 class IntentNav : AppCompatActivity() {
@@ -53,7 +54,7 @@ class IntentNav : AppCompatActivity() {
         mSend.setOnClickListener {
             sendMsg(text.text.toString())
         }
-        mArticle1.setOnClickListener { sendArticle(getString( R.string.article_title)) }
+        mArticle1.setOnClickListener { sendArticle(getString(R.string.article_title)) }
         mArticle2.setOnClickListener { sendArticle(getString(R.string.article_subtitle)) }
         mArticle3.setOnClickListener { sendArticle(getString(R.string.article_text)) }
 
@@ -68,12 +69,12 @@ class IntentNav : AppCompatActivity() {
         }
 
     private fun sendMsg(msg:String){
-        val intent = Intent(this,IntentNav2::class.java)
+        val intent = Intent(this, IntentNav2::class.java)
             .putExtra(MESSAGE,msg)
         getResult.launch(intent)
     }
     private fun sendArticle(article:String){
-        val intent = Intent(this,IntentNav2::class.java)
+        val intent = Intent(this, IntentNav2::class.java)
             .putExtra(ARTICLE,article)
         getResult.launch(intent)
     }
