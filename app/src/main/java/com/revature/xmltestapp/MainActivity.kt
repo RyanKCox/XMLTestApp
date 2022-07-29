@@ -8,6 +8,7 @@ import android.widget.Button
 import com.revature.xmltestapp.intentNav_HW.ShoppingList
 import com.revature.xmltestapp.intentNav_lab.IntentNav
 import com.revature.xmltestapp.layout_lab.Layout
+import com.revature.xmltestapp.recycleview.Recycler
 import com.revature.xmltestapp.scrollingText_lab.ScrollingTextView
 
 class MainActivity : AppCompatActivity() {
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mScrollingTextView: Button
     private lateinit var mIntentNav:Button
     private lateinit var mShoppingList:Button
+    private lateinit var mRecyclerView:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -27,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         mScrollingTextView = findViewById(R.id.button_scrollingtextview)
         mIntentNav = findViewById(R.id.button_intent_nav)
         mShoppingList = findViewById(R.id.button_shopping)
+        mRecyclerView = findViewById(R.id.button_recyclerview)
 
 
         mLayoutActivity.setOnClickListener {
@@ -43,7 +46,15 @@ class MainActivity : AppCompatActivity() {
         mShoppingList.setOnClickListener {
             navShopping()
         }
+        mRecyclerView.setOnClickListener {
+            navRecyclerView()
+        }
 
+    }
+
+    private fun navRecyclerView() {
+        val intent = Intent(this,Recycler::class.java)
+        startActivity(intent)
     }
 
     private fun navShopping() {

@@ -14,12 +14,15 @@
         android:theme="@style/Theme.XMLTestApp"
         tools:targetApi="31">
         <activity
+            android:name=".recycleview.Recycler"
+            android:exported="false" />
+        <activity
             android:name=".intentNav_HW.ShoppingItems"
             android:label="ShoppingItems"
             android:parentActivityName=".intentNav_HW.ShoppingList">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.revature.xmltestapp.intentNav_HW.ShoppingList"/>
+                android:value="com.revature.xmltestapp.intentNav_HW.ShoppingList" />
         </activity>
         <activity
             android:name=".intentNav_HW.ShoppingList"
